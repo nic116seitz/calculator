@@ -21,3 +21,5 @@ function numListener(){
     })
   })
 }
+
+function operate(numA, numB, operation)
