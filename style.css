@@ -5,10 +5,24 @@
    }
 
 .cal {
+  display: flex;
+}
+
+.cal {
   border: 2px solid black;
   font-size: 24px;
+  flex-direction: column;
 }
 
 #calBorder {
   background-color: grey;
+  width: 300px;
+  height: 600px;
+}
+
+#calViewPort {
+  background-color: black;
+  width: 200px;
+  height: 10px;
+  border: transparent;
 }
