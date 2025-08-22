@@ -21,6 +21,7 @@
 
 #calNums {
   display: grid;
+  grid-template-columns: auto auto auto;
   height: 20px;
   width: 20px;
 }
