@@ -44,5 +44,4 @@ function operate(numA, numB, operation){
     const quot = numA / numB;
     return quot;
   }
-
 }
