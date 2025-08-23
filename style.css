@@ -17,7 +17,7 @@
 }
 
 
-.num, .oper {
+.num, .oper, .funcButton {
   height: 65px;
   background-color: grey;
   width: 65px;
@@ -28,17 +28,30 @@
 
 #calButtons {
   flex-direction: row;
+  height: 400px;
 } 
+
 
 #calNums {
   display: grid;
   grid: 200px / 70px 70px 70px;
   grid-template-rows: 70px 70px 70px;
   width: 260px;
-  height: 200px;
+  height: 240px;
   margin-left: 10px;
   margin-top: 10px;
   border: none;
+}
+
+#operators {
+  display: grid;
+  grid: 60px / 70px;
+  grid-template-rows: 70px 70px 70px 75px;
+}
+
+.oper {
+  margin-left: 2px;
+  margin-top: 8px;
 }
 
 #calBorder {
@@ -56,6 +69,12 @@
 }
 
 #zero {
-  width: 215px;
+  width: 205px;
   border-radius: 10%;
+  margin-top: 10px;
+}
+
+#equals {
+  background-color: black;
+  color: white;
 }
