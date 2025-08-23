@@ -18,9 +18,13 @@
 
 
 .num, .oper {
-  height: 75px;
-  width: 75px;
+  height: 65px;
+  background-color: grey;
+  width: 65px;
+  border-radius: 50%;
+  border: none;
 }
+
 
 #calButtons {
   flex-direction: row;
@@ -29,9 +33,12 @@
 #calNums {
   display: grid;
   grid: 200px / 70px 70px 70px;
-  grid-template-rows: auto auto auto;
+  grid-template-rows: 70px 70px 70px;
   width: 260px;
   height: 200px;
+  margin-left: 10px;
+  margin-top: 10px;
+  border: none;
 }
 
 #calBorder {
@@ -50,4 +57,5 @@
 
 #zero {
   width: 215px;
+  border-radius: 10%;
 }
