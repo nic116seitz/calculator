@@ -6,10 +6,13 @@ const operator = document.querySelector('.oper');
 const calc = document.querySelector('#calViewPort');
 const para = document.createElement('p');
 
+
+
 num.forEach(e => {
-   e.addEventListener('click', (target) => {
-     para.textContent += target.textContent
-     console.log(target.textContent)
+   e.addEventListener('click', event => {
+     para.textContent += event.target.textContent
+     console.log(event.target.textContent);
+     calc.appendChild(para)
    })
 });
 
