@@ -23,7 +23,7 @@ function clearView(){
 
 const clear = document.querySelector('#clear');
 
-clear.addEventListener('click', clearView());
+clear.addEventListener('click', clearView);
 //
 // This is a possible way to create an operate function
 // function operate(numA, numB, operation){

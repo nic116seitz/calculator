@@ -4,6 +4,10 @@
   background-color: white;
    }
 
+p {
+  background-color: inherit;
+}
+
 .cal {
   display: flex;
 }
@@ -65,6 +69,7 @@
   background-color: #8FA3A1;
   height: 70px;
   border: transparent;
+  text-align: right;
 }
 
 #zero {
