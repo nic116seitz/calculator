@@ -18,6 +18,7 @@ num.forEach(e => {
 
 function clearView(){
   calc.innerHTML = '';
+  para.textContent = '';
   console.log("code reached")
 }
 
