@@ -5,6 +5,8 @@ const num = document.querySelectorAll('.num');
 const operator = document.querySelector('.oper');
 const calc = document.querySelector('#calViewPort');
 const para = document.createElement('p');
+const operAll = document.querySelectorAll('.oper');
+const equals = document.querySelector('#equals');
 
 
 
@@ -19,29 +21,48 @@ num.forEach(e => {
 function clearView(){
   calc.innerHTML = '';
   para.textContent = '';
-  console.log("code reached")
 }
 
 const clear = document.querySelector('#clear');
 
 clear.addEventListener('click', clearView);
-//
+
+let currentOper = '';
+
+operAll.forEach(e => {
+  e.addEventListener('click', event => {
+    numA = para.textContent;
+    currentOper = event.target.id;
+    console.log(`this is currentOper ${currentOper}`);
+    console.log(`this is numA ${numA}`);
+    clearView();
+  });
+})
+
+equals.addEventListener('click', () => {
+  numB = para.textContent;
+  console.log("this is numb" + numB);
+  let result = document.createElement('p') 
+  result.textContent = operate(numA, numB, currentOper);
+  calc.appendChild(result);
+})
+
 // This is a possible way to create an operate function
-// function operate(numA, numB, operation){
-//   if (operation == "add" || equals == true) {
-//     const sum = numA + numB;
-//     return sum;
-//   }
-//   else if (operation == "subtract") {
-//     const diff = numA - numB;
-//     return diff;
-//   }
-//   else if (operation == "multiply") {
-//     const prod = numA * numB;
-//     return prod;
-//   }
-//   else if (operation == "divide") {
-//     const quot = numA / numB;
-//     return quot;
-//   }
-// }
+ function operate(num1, num2, operation){
+   if (operation == "add") {
+     const sum = num1 + num2;
+     return sum;
+   }
+   else if (operation == "subtract") {
+     const diff = num1 - num2;
+     return diff;
+   }
+   else if (operation == "multiply") {
+     const prod = num1 * num2;
+     return prod;
+   }
+   else if (operation == "divide") {
+     const quot = num1 / num2;
+     return quot;
+   }
+ }
