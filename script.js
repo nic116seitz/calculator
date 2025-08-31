@@ -7,6 +7,7 @@ const calc = document.querySelector('#calViewPort');
 const para = document.createElement('p');
 const operAll = document.querySelectorAll('.oper');
 const equals = document.querySelector('#equals');
+const clear = document.querySelector('#clear');
 
 num.forEach(e => {
    e.addEventListener('click', event => {
@@ -21,7 +22,6 @@ function clearView(){
   para.textContent = '';
 }
 
-const clear = document.querySelector('#clear');
 
 clear.addEventListener('click', clearView);
 
@@ -66,3 +66,5 @@ equals.addEventListener('click', () => {
   operate(numA, numB, currentOper);
   calc.appendChild(para)
 })
+
+
