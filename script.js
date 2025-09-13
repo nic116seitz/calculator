@@ -9,6 +9,7 @@ const operAll = document.querySelectorAll('.oper');
 const equals = document.querySelector('#equals');
 const clear = document.querySelector('#clear');
 let currentOper = '';
+const negate = document.querySelector('#negate');
 
 num.forEach(e => {
    e.addEventListener('click', event => {
@@ -25,7 +26,7 @@ function clearView(){
  calc.innerHTML = '';
  para.textContent = '';
 
- if (clear.textContent = 'AC') {
+ if (clear.textContent = 'AC' && calc.textContent == '') {
     numA = '';
     console.log(numA);
     clear.textContent = 'C';
@@ -69,6 +70,10 @@ operAll.forEach(e => {
      return quot;
    }
  }
+
+negate.addEventListener('click', () => {
+
+})
 
 equals.addEventListener('click', () => {
   numB = Number(para.textContent);
