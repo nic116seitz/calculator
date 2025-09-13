@@ -22,15 +22,19 @@ num.forEach(e => {
 });
 
 function clearView(){
- if (clear.textContent = 'C') {
-  calc.innerHTML = '';
-  para.textContent = '';
- }
+ calc.innerHTML = '';
+ para.textContent = '';
 
- else if (clear.textContent = 'AC') {
+ if (clear.textContent = 'AC') {
     numA = '';
     console.log(numA);
+    clear.textContent = 'C';
  }
+
+ // else if (clear.textContent = 'C') {
+ //  calc.innerHTML = '';
+ //  para.textContent = '';
+ // }
 }
 
 clear.addEventListener('click', clearView);
